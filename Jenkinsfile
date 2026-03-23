@@ -48,10 +48,10 @@ pipeline {
     stage('Push to Docker Hub') {
       steps {
         // Pull Docker Hub credentials from Jenkins Credentials.
-        // Change `dockerhub-credentials` to the credentialsId you create in Jenkins.
+        // Use the credentialsId that exists in your Jenkins (your current one is a UUID).
         withCredentials([
           usernamePassword(
-            credentialsId: 'dockerhub-credentials',
+            credentialsId: 'd6898e21-9ec6-44cc-bef8-31166a0ffd5a',
             usernameVariable: 'DOCKERHUB_USER',
             passwordVariable: 'DOCKERHUB_PASS'
           )
